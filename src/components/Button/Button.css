@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--type-cta-default-family);
+  font-size: var(--type-cta-default-size);
+  font-weight: var(--type-cta-default-weight);
+  line-height: var(--type-cta-default-line-height);
+  letter-spacing: var(--type-cta-default-letter-spacing);
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease,
+    transform 80ms ease;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--semantic-color-status-focus-default);
+  outline-offset: 2px;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  color: var(--semantic-color-foreground-tertiary);
+  background: var(--semantic-color-neutral-contrast-lowest);
+  border-color: var(--semantic-color-neutral-contrast-low);
+  cursor: not-allowed;
+}
+
+.button--primary {
+  color: var(--semantic-color-cta-on-color);
+  background: var(--semantic-color-cta-base);
+  border-color: var(--semantic-color-cta-base);
+}
+
+.button--primary:hover:not(:disabled),
+.button--primary:active:not(:disabled) {
+  background: var(--semantic-color-cta-strong);
+  border-color: var(--semantic-color-cta-strong);
+}
+
+.button--secondary {
+  color: var(--semantic-color-foreground-accent);
+  background: var(--semantic-color-background-highlight);
+  border-color: var(--semantic-color-cta-base);
+}
+
+.button--secondary:hover:not(:disabled),
+.button--secondary:active:not(:disabled) {
+  color: var(--semantic-color-foreground-accent);
+  background: var(--semantic-color-cta-weak);
+  border-color: var(--semantic-color-cta-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

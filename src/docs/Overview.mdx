@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage, PrincipleGrid } from './TokenDocComponents';
+
+<Meta title="Introduction/Training Storybook" />
+
+<DocPage>
+  <h1>AI-ready design system sandbox</h1>
+  <p>{'This compact Storybook is a shared training environment for exploring how AI can use an explicit design-system knowledge layer. The starting point is intentionally small: Qvik System tokens and one Button component with Primary and Secondary variants.'}</p>
+
+  <div className="token-note">
+    Use the theme control in the toolbar to compare light and dark mode. Components should keep
+    the same semantic usage logic when the underlying values change.
+  </div>
+
+  <h2>Token flow</h2>
+  <PrincipleGrid />
+
+  <h2>Working rule</h2>
+  <p>{'Components consume semantic tokens. Primitive values exist as a shared source of truth, but component styles do not refer to primitive colour names or raw hex values directly.'}</p>
+</DocPage>

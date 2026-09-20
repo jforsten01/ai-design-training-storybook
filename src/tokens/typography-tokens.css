@@ -1,0 +1,102 @@
+/* Copied from Qvik System portable-typography-system/generated/typography.css. */
+
+:root {
+  --type-family-primary: 'Roboto', Arial, sans-serif;
+
+  --type-weight-regular: 400;
+  --type-weight-medium: 500;
+  --type-weight-bold: 700;
+
+  --type-size-xs: 0.875rem;
+  --type-size-sm: 1rem;
+  --type-size-md: 1.1875rem;
+  --type-size-lg: 1.4375rem;
+  --type-size-xl: 1.75rem;
+  --type-size-2xl: 2.125rem;
+  --type-size-3xl: 2.5625rem;
+  --type-size-4xl: 3.0625rem;
+  --type-size-5xl: 3.6875rem;
+
+  --type-line-height-tight: 1.2;
+  --type-line-height-snug: 1.3;
+  --type-line-height-compact: 1.4;
+  --type-line-height-normal: 1.5;
+  --type-line-height-action: 1.25;
+
+  --type-letter-spacing-normal: 0em;
+  --type-letter-spacing-action: 0.01em;
+
+  --type-title-s-family: var(--type-family-primary);
+  --type-title-s-size: var(--type-size-2xl);
+  --type-title-s-weight: var(--type-weight-bold);
+  --type-title-s-line-height: var(--type-line-height-tight);
+  --type-title-s-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-title-m-family: var(--type-family-primary);
+  --type-title-m-size: var(--type-size-2xl);
+  --type-title-m-weight: var(--type-weight-bold);
+  --type-title-m-line-height: var(--type-line-height-tight);
+  --type-title-m-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-title-l-family: var(--type-family-primary);
+  --type-title-l-size: var(--type-size-2xl);
+  --type-title-l-weight: var(--type-weight-bold);
+  --type-title-l-line-height: var(--type-line-height-tight);
+  --type-title-l-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-subtitle-s-family: var(--type-family-primary);
+  --type-subtitle-s-size: var(--type-size-md);
+  --type-subtitle-s-weight: var(--type-weight-bold);
+  --type-subtitle-s-line-height: var(--type-line-height-snug);
+  --type-subtitle-s-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-subtitle-m-family: var(--type-family-primary);
+  --type-subtitle-m-size: var(--type-size-lg);
+  --type-subtitle-m-weight: var(--type-weight-bold);
+  --type-subtitle-m-line-height: var(--type-line-height-snug);
+  --type-subtitle-m-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-subtitle-l-family: var(--type-family-primary);
+  --type-subtitle-l-size: var(--type-size-xl);
+  --type-subtitle-l-weight: var(--type-weight-bold);
+  --type-subtitle-l-line-height: var(--type-line-height-snug);
+  --type-subtitle-l-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-body-default-family: var(--type-family-primary);
+  --type-body-default-size: var(--type-size-sm);
+  --type-body-default-weight: var(--type-weight-regular);
+  --type-body-default-line-height: var(--type-line-height-normal);
+  --type-body-default-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-body-compact-family: var(--type-family-primary);
+  --type-body-compact-size: var(--type-size-xs);
+  --type-body-compact-weight: var(--type-weight-regular);
+  --type-body-compact-line-height: var(--type-line-height-compact);
+  --type-body-compact-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-label-default-family: var(--type-family-primary);
+  --type-label-default-size: var(--type-size-xs);
+  --type-label-default-weight: var(--type-weight-medium);
+  --type-label-default-line-height: var(--type-line-height-compact);
+  --type-label-default-letter-spacing: var(--type-letter-spacing-normal);
+
+  --type-cta-default-family: var(--type-family-primary);
+  --type-cta-default-size: var(--type-size-sm);
+  --type-cta-default-weight: var(--type-weight-bold);
+  --type-cta-default-line-height: var(--type-line-height-action);
+  --type-cta-default-letter-spacing: var(--type-letter-spacing-action);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --type-title-m-size: var(--type-size-3xl);
+    --type-title-l-size: var(--type-size-4xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --type-title-m-size: var(--type-size-4xl);
+    --type-title-l-size: var(--type-size-5xl);
+  }
+}

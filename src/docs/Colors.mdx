@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorTokenGroups, DocPage } from './TokenDocComponents';
+
+<Meta title="Foundations/Colors" />
+
+<DocPage>
+  <h1>Color tokens</h1>
+  <p>{'Primitive tokens store palette values. Semantic tokens state why a colour is used. This page focuses on the semantic layer that components and product UI should consume.'}</p>
+
+  <div className="token-note">
+    Check both themes from the toolbar. The role stays the same even when the resolved colour
+    changes. Contrast must be validated in the actual component context against WCAG AA.
+  </div>
+
+  <ColorTokenGroups />
+</DocPage>

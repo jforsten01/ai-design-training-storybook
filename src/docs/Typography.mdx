@@ -1,0 +1,17 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage, TypographyRoles } from './TokenDocComponents';
+
+<Meta title="Foundations/Typography" />
+
+<DocPage>
+  <h1>Typography roles</h1>
+  <p>{'Semantic typography roles combine the scale, weight, line height and letter spacing into reusable decisions. Title M and Title L respond at 768 px and 1280 px; other roles remain stable unless the component defines a different rule.'}</p>
+
+  <div className="token-note">
+    Choose a role by purpose, not by visual size. CTA typography is a component-level role and
+    should not replace general body or label text.
+  </div>
+
+  <h2>Role preview</h2>
+  <TypographyRoles />
+</DocPage>

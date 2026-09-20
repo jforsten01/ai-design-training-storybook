@@ -1,0 +1,47 @@
+:root {
+  font-family: var(--type-family-primary);
+  color: var(--semantic-color-foreground-primary);
+  background: var(--semantic-color-background-default);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.storybook-theme {
+  min-width: 100%;
+  min-height: 100vh;
+  padding: var(--space-8);
+  color: var(--semantic-color-foreground-primary);
+  background: var(--semantic-color-background-default);
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.docs-theme {
+  min-height: 100vh;
+  color: var(--semantic-color-foreground-primary);
+  background: var(--semantic-color-background-default);
+}
+
+.sb-show-main.sb-main-centered #storybook-root {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .storybook-theme {
+    padding: var(--space-4);
+  }
+}

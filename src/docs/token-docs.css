@@ -1,0 +1,210 @@
+.token-docs {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  color: var(--semantic-color-foreground-primary);
+  font-family: var(--type-body-default-family);
+  font-size: var(--type-body-default-size);
+  line-height: var(--type-body-default-line-height);
+}
+
+.token-docs > h1 {
+  margin: 0 0 var(--space-4);
+  color: var(--semantic-color-foreground-primary) !important;
+  font-family: var(--type-title-m-family);
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  letter-spacing: var(--type-title-m-letter-spacing);
+}
+
+.token-docs > h2,
+.token-section > h2 {
+  margin: var(--space-10) 0 var(--space-4);
+  color: var(--semantic-color-foreground-primary) !important;
+  font-family: var(--type-subtitle-m-family);
+  font-size: var(--type-subtitle-m-size);
+  font-weight: var(--type-subtitle-m-weight);
+  line-height: var(--type-subtitle-m-line-height);
+}
+
+.token-docs > p {
+  max-width: 72ch;
+  margin: 0 0 var(--space-6);
+  color: var(--semantic-color-foreground-secondary) !important;
+}
+
+.token-docs p {
+  color: var(--semantic-color-foreground-secondary) !important;
+}
+
+.token-docs code {
+  color: var(--semantic-color-foreground-primary);
+  font: var(--type-weight-medium) var(--type-size-xs)/var(--type-line-height-compact) ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+}
+
+.token-note {
+  padding: var(--space-4);
+  border-left: var(--space-1) solid var(--semantic-color-status-info-base);
+  border-radius: var(--radius-md);
+  color: var(--semantic-color-foreground-primary) !important;
+  background: var(--semantic-color-status-info-weak);
+}
+
+.token-note p {
+  color: var(--semantic-color-foreground-primary) !important;
+}
+
+.principle-grid,
+.color-grid,
+.radius-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.principle-grid article,
+.color-token,
+.radius-grid article,
+.type-list article {
+  border: 1px solid var(--semantic-color-neutral-contrast-low);
+  border-radius: var(--radius-lg);
+  background: var(--semantic-color-background-highlight);
+}
+
+.principle-grid article {
+  padding: var(--space-5);
+}
+
+.principle-grid span {
+  display: inline-grid;
+  width: var(--space-8);
+  height: var(--space-8);
+  place-items: center;
+  border-radius: var(--radius-full);
+  color: var(--semantic-color-cta-on-color);
+  background: var(--semantic-color-cta-base);
+  font-weight: var(--type-weight-bold);
+}
+
+.principle-grid h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  color: var(--semantic-color-foreground-primary) !important;
+  font-size: var(--type-size-md);
+}
+
+.principle-grid p,
+.color-token p,
+.type-list p {
+  margin: 0;
+  color: var(--semantic-color-foreground-secondary) !important;
+}
+
+.color-token {
+  overflow: hidden;
+}
+
+.color-token__swatch {
+  height: var(--space-16);
+  background: var(--swatch-color);
+  border-bottom: 1px solid var(--semantic-color-neutral-contrast-low);
+}
+
+.color-token > div:last-child {
+  padding: var(--space-4);
+}
+
+.color-token p {
+  margin-top: var(--space-2);
+}
+
+.scale-list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.scale-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 1.2fr) minmax(150px, 2fr) 64px;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--space-10);
+}
+
+.scale-row__preview {
+  height: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--semantic-color-background-accent);
+}
+
+.scale-row__preview span {
+  display: block;
+  min-width: 2px;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--semantic-color-cta-base);
+}
+
+.radius-grid article {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.radius-grid article > div {
+  height: var(--space-16);
+  background: var(--semantic-color-background-accent);
+  border: 2px solid var(--semantic-color-cta-base);
+}
+
+.radius-grid article > span {
+  color: var(--semantic-color-foreground-secondary);
+}
+
+.type-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.type-list article {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) minmax(260px, 2fr);
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4);
+}
+
+.type-list article > div p {
+  margin-top: var(--space-1);
+  font-size: var(--type-size-xs);
+}
+
+.type-sample {
+  color: var(--semantic-color-foreground-primary) !important;
+}
+
+.type-sample--title-l,
+.type-sample--title-m,
+.type-sample--title-s {
+  font-family: var(--type-title-l-family);
+  font-weight: var(--type-title-l-weight);
+  line-height: var(--type-title-l-line-height);
+}
+
+.type-sample--title-l { font-size: var(--type-title-l-size); }
+.type-sample--title-m { font-size: var(--type-title-m-size); }
+.type-sample--title-s { font-size: var(--type-title-s-size); }
+.type-sample--subtitle-l { font: var(--type-subtitle-l-weight) var(--type-subtitle-l-size)/var(--type-subtitle-l-line-height) var(--type-subtitle-l-family); }
+.type-sample--subtitle-m { font: var(--type-subtitle-m-weight) var(--type-subtitle-m-size)/var(--type-subtitle-m-line-height) var(--type-subtitle-m-family); }
+.type-sample--subtitle-s { font: var(--type-subtitle-s-weight) var(--type-subtitle-s-size)/var(--type-subtitle-s-line-height) var(--type-subtitle-s-family); }
+.type-sample--body-default { font: var(--type-body-default-weight) var(--type-body-default-size)/var(--type-body-default-line-height) var(--type-body-default-family); }
+.type-sample--body-compact { font: var(--type-body-compact-weight) var(--type-body-compact-size)/var(--type-body-compact-line-height) var(--type-body-compact-family); }
+.type-sample--label-default { font: var(--type-label-default-weight) var(--type-label-default-size)/var(--type-label-default-line-height) var(--type-label-default-family); }
+.type-sample--cta-default { font: var(--type-cta-default-weight) var(--type-cta-default-size)/var(--type-cta-default-line-height) var(--type-cta-default-family); }
+
+@media (max-width: 700px) {
+  .scale-row,
+  .type-list article {
+    grid-template-columns: 1fr;
+  }
+}

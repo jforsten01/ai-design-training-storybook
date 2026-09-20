@@ -1,0 +1,82 @@
+/* Raw demo palette. Semantic tokens are the public component API. */
+:root {
+  /* Light neutrals */
+  --primitive-color-light-gray-0: #ffffff;
+  --primitive-color-light-gray-50: #f6f6f6;
+  --primitive-color-light-gray-100: #ededed;
+  --primitive-color-light-gray-200: #e4e4e4;
+  --primitive-color-light-gray-300: #dedede;
+  --primitive-color-light-gray-500: #a8a8a8;
+  --primitive-color-light-gray-600: #6f6f6f;
+  --primitive-color-light-gray-800: #3c3c3c;
+  --primitive-color-light-gray-900: #222222;
+  --primitive-color-light-gray-1000: #000000;
+
+  /* Adapted demo blue */
+  --primitive-color-light-blue-50: #e5f0ff;
+  --primitive-color-light-blue-100: #e4ecf7;
+  --primitive-color-light-blue-300: #cfe0f2;
+  --primitive-color-light-blue-700: #0057d9;
+  --primitive-color-light-blue-800: #0042a8;
+
+  /* Retained source accents */
+  --primitive-color-light-coral-500: #f09591;
+  --primitive-color-light-purple-700: #8246af;
+  --primitive-color-light-yellow-300: #ffd32c;
+
+  /* Neutralised demo status palette */
+  --primitive-color-light-critical-base: #c43b32;
+  --primitive-color-light-critical-strong: #9f2d24;
+  --primitive-color-light-critical-weak: #fdf0ef;
+  --primitive-color-light-warning-base: #b27616;
+  --primitive-color-light-warning-strong: #80530b;
+  --primitive-color-light-warning-weak: #fff8e8;
+  --primitive-color-light-success-base: #23805b;
+  --primitive-color-light-success-strong: #176044;
+  --primitive-color-light-success-weak: #edf8f2;
+  --primitive-color-light-info-base: #3576d4;
+  --primitive-color-light-info-strong: #2459a8;
+  --primitive-color-light-info-weak: #eff5ff;
+  --primitive-color-light-ai-base: #8762b5;
+  --primitive-color-light-ai-strong: #64438e;
+  --primitive-color-light-ai-weak: #f5f0fb;
+
+  /* Dark neutrals */
+  --primitive-color-dark-gray-0: #0c0d0d;
+  --primitive-color-dark-gray-50: #191b1f;
+  --primitive-color-dark-gray-200: #2c2f35;
+  --primitive-color-dark-gray-300: #33363d;
+  --primitive-color-dark-gray-600: #808793;
+  --primitive-color-dark-gray-700: #a8acb4;
+  --primitive-color-dark-gray-800: #ced1d6;
+  --primitive-color-dark-gray-900: #f5f6f7;
+  --primitive-color-dark-gray-1000: #ffffff;
+
+  /* Dark blue derived from the adapted demo blue */
+  --primitive-color-dark-blue-100: #073564;
+  --primitive-color-dark-blue-700: #66a3ff;
+  --primitive-color-dark-blue-800: #8bbcff;
+  --primitive-color-dark-blue-900: #bad9f8;
+
+  /* Retained source dark accents */
+  --primitive-color-dark-coral-500: #bf544f;
+  --primitive-color-dark-purple-700: #cb97f2;
+  --primitive-color-dark-yellow-300: #664d00;
+
+  /* Dark neutralised status palette */
+  --primitive-color-dark-critical-base: #e47770;
+  --primitive-color-dark-critical-strong: #f0aaa4;
+  --primitive-color-dark-critical-weak: #4e211d;
+  --primitive-color-dark-warning-base: #d6a548;
+  --primitive-color-dark-warning-strong: #f1d28d;
+  --primitive-color-dark-warning-weak: #4b3510;
+  --primitive-color-dark-success-base: #63ba91;
+  --primitive-color-dark-success-strong: #a1ddbd;
+  --primitive-color-dark-success-weak: #123d2c;
+  --primitive-color-dark-info-base: #86adf0;
+  --primitive-color-dark-info-strong: #b8d0fa;
+  --primitive-color-dark-info-weak: #172f5b;
+  --primitive-color-dark-ai-base: #c0a4df;
+  --primitive-color-dark-ai-strong: #decaf2;
+  --primitive-color-dark-ai-weak: #38264f;
+}
