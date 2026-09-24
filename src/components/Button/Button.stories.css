@@ -1,0 +1,75 @@
+.button-state-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: var(--space-8);
+  width: min(100%, 720px);
+}
+
+.button-state-column {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.button-state-column h2 {
+  margin: 0;
+  color: var(--semantic-color-foreground-primary);
+  font-family: var(--type-subtitle-m-family);
+  font-size: var(--type-subtitle-m-size);
+  font-weight: var(--type-subtitle-m-weight);
+  line-height: var(--type-subtitle-m-line-height);
+  letter-spacing: var(--type-subtitle-m-letter-spacing);
+}
+
+.button-state-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.button-state-row {
+  display: grid;
+  grid-template-columns: minmax(72px, 1fr) minmax(128px, auto);
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--space-16);
+  padding: var(--space-3);
+  border: 1px solid var(--semantic-color-neutral-contrast-low);
+  border-radius: var(--radius-lg);
+  background: var(--semantic-color-background-highlight);
+}
+
+.button-state-row > span {
+  color: var(--semantic-color-foreground-primary);
+  font-family: var(--type-label-default-family);
+  font-size: var(--type-label-default-size);
+  font-weight: var(--type-label-default-weight);
+  line-height: var(--type-label-default-line-height);
+  letter-spacing: var(--type-label-default-letter-spacing);
+}
+
+.button-state-row[data-state='hover'] .button--primary,
+.button-state-row[data-state='active'] .button--primary {
+  background: var(--semantic-color-cta-strong);
+  border-color: var(--semantic-color-cta-strong);
+}
+
+.button-state-row[data-state='hover'] .button--secondary,
+.button-state-row[data-state='active'] .button--secondary {
+  color: var(--semantic-color-foreground-accent);
+  background: var(--semantic-color-cta-weak);
+  border-color: var(--semantic-color-cta-strong);
+}
+
+.button-state-row[data-state='focus'] .button {
+  outline: var(--space-0-5) solid var(--semantic-color-status-focus-default);
+  outline-offset: var(--space-0-5);
+}
+
+.button-state-row[data-state='active'] .button {
+  transform: translateY(1px);
+}
+
+@media (max-width: 560px) {
+  .button-state-matrix {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,16 +1,31 @@
 import { Meta } from '@storybook/addon-docs/blocks';
-import { ColorTokenGroups, DocPage } from './TokenDocComponents';
+import {
+  ColorLayerFlow,
+  DocPage,
+  PrimitiveColorTokenGroups,
+  SemanticColorTokenGroups,
+} from './TokenDocComponents';
 
 <Meta title="Foundations/Colors" />
 
 <DocPage>
   <h1>Color tokens</h1>
-  <p>{'Primitive tokens store palette values. Semantic tokens state why a colour is used. This page focuses on the semantic layer that components and product UI should consume.'}</p>
+  <p>{'The color system has two explicit layers. Primitive tokens store palette values. Semantic tokens state why a colour is used and are the public color API for components.'}</p>
+
+  <ColorLayerFlow />
+
+  <h2>Layer 1 — Primitive values</h2>
+  <p>{'Primitive values provide the complete light and dark palettes used by semantic mappings. They are documented for traceability, but component CSS must not refer to them directly.'}</p>
+
+  <PrimitiveColorTokenGroups />
+
+  <h2>Layer 2 — Semantic roles</h2>
+  <p>{'Semantic roles are consumed by components. Use the toolbar to see how the same role resolves differently in light and dark themes.'}</p>
 
   <div className="token-note">
     Check both themes from the toolbar. The role stays the same even when the resolved colour
     changes. Contrast must be validated in the actual component context against WCAG AA.
   </div>
 
-  <ColorTokenGroups />
+  <SemanticColorTokenGroups />
 </DocPage>

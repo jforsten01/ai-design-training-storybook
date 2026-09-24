@@ -36,6 +36,27 @@ select {
   background: var(--semantic-color-background-default);
 }
 
+.sbdocs-wrapper,
+.sbdocs-content {
+  background: var(--semantic-color-background-default) !important;
+}
+
+.docs-theme .sbdocs-title,
+.docs-theme .sbdocs-h1,
+.docs-theme .sbdocs-h2,
+.docs-theme .sbdocs-h3,
+.docs-theme .sbdocs-h4,
+.docs-theme .sbdocs-h5,
+.docs-theme .sbdocs-h6,
+.docs-theme .sbdocs-p,
+.docs-theme .sbdocs-subtitle {
+  color: var(--semantic-color-foreground-primary) !important;
+}
+
+.docs-theme > p {
+  color: var(--semantic-color-foreground-primary) !important;
+}
+
 .sb-show-main.sb-main-centered #storybook-root {
   width: 100%;
 }

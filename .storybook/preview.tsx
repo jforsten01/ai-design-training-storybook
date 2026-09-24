@@ -3,6 +3,9 @@ import { DocsContainer, type DocsContainerProps } from '@storybook/addon-docs/bl
 import type { Decorator, Preview } from '@storybook/react-vite';
 import { GLOBALS_UPDATED } from 'storybook/internal/core-events';
 
+import '@fontsource/roboto/latin-400.css';
+import '@fontsource/roboto/latin-500.css';
+import '@fontsource/roboto/latin-700.css';
 import '../src/tokens/primitive-color-tokens.css';
 import '../src/tokens/color-tokens.css';
 import '../src/tokens/spacing-tokens.css';
@@ -40,6 +43,14 @@ function ThemedDocsContainer({
     context.channel.on(GLOBALS_UPDATED, updateTheme);
     return () => context.channel.off(GLOBALS_UPDATED, updateTheme);
   }, [context.channel]);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+
+    return () => {
+      delete document.documentElement.dataset.theme;
+    };
+  }, [theme]);
 
   return (
     <DocsContainer context={context}>

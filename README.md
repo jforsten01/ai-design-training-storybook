@@ -3,6 +3,10 @@
 A compact React + TypeScript + Vite Storybook for the workshop sandbox. It contains
 documented Qvik System token foundations and a token-based Button component.
 
+Read [`DESIGN-SYSTEM.md`](DESIGN-SYSTEM.md) before creating or changing a
+component. `AGENTS.md` and `CLAUDE.md` make the same contract discoverable to AI
+coding tools after the repository is cloned.
+
 ## Run locally
 
 ```bash
@@ -24,9 +28,13 @@ npm run build-storybook
 
 - Introduction to the primitive → semantic → component token flow
 - Documented semantic color tokens with light and dark themes
+- Human- and agent-readable token usage rules
+- A Foundations / Agents page explaining the repository knowledge layer
 - Spacing and radius scales
 - Semantic typography roles
+- Bundled Roboto Regular, Medium and Bold for reproducible typography previews
 - Button with Primary and Secondary variants
+- ArticleTeaser with a responsive editorial image, headline and publication metadata
 - Storybook accessibility checks through the a11y addon
 
 ## Token sources

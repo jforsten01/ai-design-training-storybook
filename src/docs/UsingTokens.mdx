@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from './TokenDocComponents';
+
+<Meta title="Foundations/Using tokens" />
+
+<DocPage>
+  <h1>Using tokens</h1>
+  <p>{'Tokens are decisions, not a colour or size menu. Choose a semantic role from the purpose of the content or component, then validate the result in context.'}</p>
+
+  <div className="token-note">
+    Components use semantic colour and typography roles. They do not use raw colours or
+    primitive colour tokens. Shared token changes require human approval.
+  </div>
+
+  <h2>Required workflow</h2>
+  <ol className="guideline-steps">
+    <li>Identify the component purpose, hierarchy and relevant states.</li>
+    <li>Select existing semantic roles and shared scale tokens.</li>
+    <li>Implement without raw colour or avoidable one-off spacing values.</li>
+    <li>Review light and dark themes and all applicable interaction states.</li>
+    <li>Validate the actual colour pairs against WCAG AA.</li>
+    <li>Propose a missing rule or token instead of inventing one.</li>
+  </ol>
+
+  <h2>Role families</h2>
+  <div className="guideline-grid">
+    <article>
+      <h3>Foreground</h3>
+      <p>Text and icons. Use primary, secondary or tertiary by content emphasis. Accent is for interactive emphasis.</p>
+    </article>
+    <article>
+      <h3>Background</h3>
+      <p>Default is the canvas, highlight is a card or panel, accent is a subtle selected surface, and brand is a strong branded surface.</p>
+    </article>
+    <article>
+      <h3>CTA</h3>
+      <p>Base is the default interactive fill or border, strong is hover or active, weak is a subtle interactive surface, and on-color is content on a filled CTA.</p>
+    </article>
+    <article>
+      <h3>Status</h3>
+      <p>Use weak for the background, base for an indicator or icon, and strong for text and borders.</p>
+    </article>
+  </div>
+
+  <h2>Common pair patterns</h2>
+  <div className="guideline-grid">
+    <article>
+      <h3>Card</h3>
+      <p><code>foreground-primary</code> on <code>background-highlight</code>, with an optional <code>neutral-contrast-low</code> border.</p>
+    </article>
+    <article>
+      <h3>Primary CTA</h3>
+      <p><code>cta-on-color</code> on <code>cta-base</code>; use <code>cta-strong</code> for hover and active.</p>
+    </article>
+    <article>
+      <h3>Secondary CTA</h3>
+      <p><code>foreground-accent</code> on <code>background-highlight</code>, with a <code>cta-base</code> border and <code>cta-weak</code> hover surface.</p>
+    </article>
+    <article>
+      <h3>Status message</h3>
+      <p>Pair the matching <code>{'status-*-strong'}</code> foreground with the <code>{'status-*-weak'}</code> background.</p>
+    </article>
+  </div>
+
+  <h2>Typography, spacing and radius</h2>
+  <ul className="guideline-list">
+    <li>Choose typography by content purpose and hierarchy, not by the closest visual size.</li>
+    <li>Apply the complete typography role: family, size, weight, line height and letter spacing.</li>
+    <li>Use <code>body/compact</code> only for genuinely dense content and <code>cta/default</code> only for actions.</li>
+    <li>Use the spacing scale for relationships: 8px for a tight gap, 16px for default component padding and 24–32px for group or section separation.</li>
+    <li>Use radius roles consistently: medium for a standard control, large for a card and full for a pill or circle.</li>
+  </ul>
+
+  <h2>When a token is missing</h2>
+  <p>{'Do not use a raw value or the nearest-looking primitive token. Describe the component need, state, semantic purpose and the closest existing role. Propose the smallest reusable addition and wait for approval.'}</p>
+
+  <div className="token-warning">
+    Some roles in the snapshot are intentionally restricted because their names do not provide a
+    sufficiently specific usage rule. Read <code>DESIGN-SYSTEM.md</code> before using static,
+    quaternary or brand-secondary colour roles.
+  </div>
+</DocPage>

@@ -1,0 +1,94 @@
+.article-teaser {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--semantic-color-neutral-contrast-low);
+  border-radius: var(--radius-lg);
+  background: var(--semantic-color-background-highlight);
+  box-shadow: 0 var(--space-1) var(--space-3) var(--semantic-color-shadow-card);
+}
+
+.article-teaser__link {
+  display: block;
+  color: var(--semantic-color-foreground-primary);
+  text-decoration: none;
+}
+
+.article-teaser__link:focus-visible {
+  outline: var(--space-0-5) solid var(--semantic-color-status-focus-default);
+  outline-offset: calc(-1 * var(--space-0-5));
+}
+
+.article-teaser__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--semantic-color-background-accent);
+}
+
+.article-teaser__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.article-teaser__content {
+  padding: var(--space-5);
+}
+
+.article-teaser__headline {
+  margin: 0;
+  color: var(--semantic-color-foreground-primary);
+  font-family: var(--type-title-s-family);
+  font-size: var(--type-title-s-size);
+  font-weight: var(--type-title-s-weight);
+  line-height: var(--type-title-s-line-height);
+  letter-spacing: var(--type-title-s-letter-spacing);
+  transition: color 140ms ease;
+}
+
+.article-teaser__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  color: var(--semantic-color-foreground-secondary);
+  font-family: var(--type-label-default-family);
+  font-size: var(--type-label-default-size);
+  font-weight: var(--type-label-default-weight);
+  line-height: var(--type-label-default-line-height);
+  letter-spacing: var(--type-label-default-letter-spacing);
+}
+
+.article-teaser__category {
+  color: var(--semantic-color-foreground-accent);
+  font-weight: var(--type-weight-bold);
+}
+
+.article-teaser__link:hover .article-teaser__headline,
+.article-teaser__link:focus-visible .article-teaser__headline,
+.article-teaser__link:active .article-teaser__headline {
+  color: var(--semantic-color-foreground-accent);
+}
+
+.article-teaser__link:hover .article-teaser__media img {
+  transform: scale(1.02);
+}
+
+.article-teaser__link:active .article-teaser__media img {
+  transform: scale(1.01);
+}
+
+@media (max-width: 640px) {
+  .article-teaser__content {
+    padding: var(--space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-teaser__media img,
+  .article-teaser__headline {
+    transition: none;
+  }
+}

@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from './TokenDocComponents';
+
+<Meta title="Foundations/Agents" />
+
+<DocPage>
+  <h1>Working with agents</h1>
+  <p>{'The repository contains a small knowledge layer for AI coding tools. It gives the agent project-specific rules before the agent reads tokens, examples and stories.'}</p>
+
+  <div className="token-note">
+    Ask the agent to study the project before making changes. A coding agent can read these files;
+    it does not need to infer the design system only from the rendered Storybook.
+  </div>
+
+  <h2>Agent entry points</h2>
+  <div className="guideline-grid">
+    <article>
+      <h3><code>CLAUDE.md</code></h3>
+      <p>Claude Code entry point. It loads the agent rules and the shared design-system contract.</p>
+    </article>
+    <article>
+      <h3><code>AGENTS.md</code></h3>
+      <p>Concise working rules for Codex and other compatible coding agents.</p>
+    </article>
+    <article>
+      <h3><code>DESIGN-SYSTEM.md</code></h3>
+      <p>The shared contract for token roles, approved pair patterns, accessibility, missing tokens and component completion.</p>
+    </article>
+  </div>
+
+  <h2>Implementation evidence</h2>
+  <div className="guideline-grid">
+    <article>
+      <h3><code>src/tokens/</code></h3>
+      <p>The executable primitive, semantic, spacing, radius and typography token snapshot.</p>
+    </article>
+    <article>
+      <h3><code>src/components/</code></h3>
+      <p>Existing implementation examples. Button demonstrates semantic colours, typography, spacing, states and themes.</p>
+    </article>
+    <article>
+      <h3><code>src/docs/</code></h3>
+      <p>Human-readable Storybook guidance and visual token previews. These explain the same system from the participant's perspective.</p>
+    </article>
+  </div>
+
+  <h2>Recommended first instruction</h2>
+  <div className="agent-prompt">
+    <code>{'Read CLAUDE.md or AGENTS.md, DESIGN-SYSTEM.md, the token files and the existing component examples. Explain the rules relevant to this task and identify any missing or ambiguous rule. Do not change files yet.'}</code>
+  </div>
+
+  <h2>What the agent should return</h2>
+  <ul className="guideline-list">
+    <li>The component purpose, hierarchy and required states.</li>
+    <li>The semantic tokens and typography roles it plans to use.</li>
+    <li>The existing component or story that provides the closest implementation example.</li>
+    <li>Any design-system gap that requires a human decision.</li>
+    <li>The checks it will run after implementation.</li>
+  </ul>
+
+  <div className="token-warning">
+    The files guide the agent, but they do not approve new shared decisions. A person reviews
+    ambiguous mappings, new tokens, accessibility and the final component.
+  </div>
+</DocPage>
+

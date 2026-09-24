@@ -1,6 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from './Button';
+import './Button.stories.css';
+
+const buttonStates = ['Default', 'Hover', 'Focus', 'Active', 'Disabled'] as const;
+
+function ButtonStateColumn({ variant }: { variant: 'primary' | 'secondary' }) {
+  return (
+    <section className="button-state-column">
+      <h2>{variant === 'primary' ? 'Primary' : 'Secondary'}</h2>
+      <div className="button-state-list">
+        {buttonStates.map((state) => (
+          <div className="button-state-row" data-state={state.toLowerCase()} key={state}>
+            <span>{state}</span>
+            <Button disabled={state === 'Disabled'} variant={variant}>
+              {variant === 'primary' ? 'Continue' : 'Cancel'}
+            </Button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 const meta = {
   title: 'Components/Button',
@@ -65,5 +86,23 @@ export const ActionHierarchy: Story = {
   parameters: {
     controls: { disable: true },
     docs: { description: { story: 'Primary and Secondary shown together as an action group.' } },
+  },
+};
+
+export const AllStates: Story = {
+  render: () => (
+    <div className="button-state-matrix">
+      <ButtonStateColumn variant="primary" />
+      <ButtonStateColumn variant="secondary" />
+    </div>
+  ),
+  parameters: {
+    controls: { disable: true },
+    docs: {
+      description: {
+        story:
+          'Primary and Secondary shown in every supported visual state: default, hover, focus, active and disabled.',
+      },
+    },
   },
 };
