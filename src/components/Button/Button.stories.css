@@ -1,6 +1,6 @@
 .button-state-matrix {
   display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  grid-template-columns: minmax(240px, 1fr);
   gap: var(--space-8);
   width: min(100%, 720px);
 }
@@ -49,13 +49,6 @@
 .button-state-row[data-state='hover'] .button--primary,
 .button-state-row[data-state='active'] .button--primary {
   background: var(--semantic-color-cta-strong);
-  border-color: var(--semantic-color-cta-strong);
-}
-
-.button-state-row[data-state='hover'] .button--secondary,
-.button-state-row[data-state='active'] .button--secondary {
-  color: var(--semantic-color-foreground-accent);
-  background: var(--semantic-color-cta-weak);
   border-color: var(--semantic-color-cta-strong);
 }
 

@@ -45,19 +45,6 @@
   border-color: var(--semantic-color-cta-strong);
 }
 
-.button--secondary {
-  color: var(--semantic-color-foreground-accent);
-  background: var(--semantic-color-background-highlight);
-  border-color: var(--semantic-color-cta-base);
-}
-
-.button--secondary:hover:not(:disabled),
-.button--secondary:active:not(:disabled) {
-  color: var(--semantic-color-foreground-accent);
-  background: var(--semantic-color-cta-weak);
-  border-color: var(--semantic-color-cta-strong);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .button {
     transition: none;

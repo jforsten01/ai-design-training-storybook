@@ -145,7 +145,6 @@ foreground role only when the component semantics explicitly require it.
 | Supporting content | `foreground-secondary` | `background-default` or `background-highlight` |
 | Card | `foreground-primary` | `background-highlight`, optional `neutral-contrast-low` border |
 | Primary CTA | `cta-on-color` | `cta-base`; `cta-strong` on hover/active |
-| Secondary CTA | `foreground-accent` | `background-highlight`, `cta-base` border, `cta-weak` on hover |
 | Status message | matching `status-*-strong` | matching `status-*-weak`, optional `status-*-base` icon |
 
 ## Typography roles

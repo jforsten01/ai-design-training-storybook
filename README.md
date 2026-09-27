@@ -33,7 +33,7 @@ npm run build-storybook
 - Spacing and radius scales
 - Semantic typography roles
 - Bundled Roboto Regular, Medium and Bold for reproducible typography previews
-- Button with Primary and Secondary variants
+- Primary Button with documented interaction states
 - ArticleTeaser with a responsive editorial image, headline and publication metadata
 - Storybook accessibility checks through the a11y addon
 

@@ -2,21 +2,17 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import './Button.css';
 
-export type ButtonVariant = 'primary' | 'secondary';
-
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
-  variant?: ButtonVariant;
 };
 
 export function Button({
   children,
   className = '',
   type = 'button',
-  variant = 'primary',
   ...props
 }: ButtonProps) {
-  const classes = ['button', `button--${variant}`, className].filter(Boolean).join(' ');
+  const classes = ['button', 'button--primary', className].filter(Boolean).join(' ');
 
   return (
     <button className={classes} type={type} {...props}>
