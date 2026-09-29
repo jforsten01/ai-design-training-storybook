@@ -52,11 +52,6 @@
   border-color: var(--semantic-color-cta-strong);
 }
 
-.button-state-row[data-state='focus'] .button {
-  outline: var(--space-0-5) solid var(--semantic-color-status-focus-default);
-  outline-offset: var(--space-0-5);
-}
-
 .button-state-row[data-state='active'] .button {
   transform: translateY(1px);
 }

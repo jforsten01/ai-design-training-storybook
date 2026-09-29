@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from './Button';
 import './Button.stories.css';
 
-const buttonStates = ['Default', 'Hover', 'Focus', 'Active', 'Disabled'] as const;
+const buttonStates = ['Default', 'Hover', 'Active', 'Disabled'] as const;
 
 function ButtonStateColumn() {
   return (
@@ -28,7 +28,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'A focused Primary Button exercise component. It uses semantic colour, spacing, radius and typography tokens.',
+          'A deliberately scoped Primary Button exercise component. It uses semantic colour, spacing, radius and typography tokens.',
       },
     },
   },
@@ -72,7 +72,7 @@ export const AllStates: Story = {
     docs: {
       description: {
         story:
-          'The Primary Button shown in every supported visual state: default, hover, focus, active and disabled.',
+          'The Primary Button shown in the four states covered by this exercise: default, hover, active and disabled.',
       },
     },
   },
